@@ -1,3 +1,6 @@
 /logs/
 /vendor/
 /nbproject/
+test/rapid.*
+test/*.json
+/src/metadata/metadata_full.json

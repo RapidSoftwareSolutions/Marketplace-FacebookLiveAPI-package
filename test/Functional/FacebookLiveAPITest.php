@@ -1,19 +1,19 @@
 <?php
 
-namespace Tests\Functional;
+namespace Test\Functional;
 
 require_once __DIR__ . '/../../src/Models/paginationClass.php';
 require_once __DIR__ . '/../../src/Models/normalizeJson.php';
 
 class FacebookLiveAPITest extends BaseTestCase {
     
-    protected $token = 'EAAWzJ0aa2GsBAMD2gZAZCGF0IAuZChhWv8L4HTWS6ZAvAyyOLpqpnjTtipyxlgXtQ7jLHkxLfQV6sufcQiqsr8rv9LQbjIajJjmMmhyo9IRIEJ9bkBRkzFZAZC8ZAVyZCrwazjnIzkT14ZBK5yN5fzdtmn5Yd3ZACcIZBKetZB7lOkifm1Kmbz8ypiQy';
+    protected $token = 'EAAWzJ0aa2GsBAPfZCRTGSUot9tbdevrsZCRDrdAGa6eV1wxcR1qfl60leRx1ObCnTdojmuy991gPYSxstHLudZA5dqFKD2asKF5ZA3o06o3oQmDC9G4DI8RKqzLttVeWesS7ar1PvdBr4f4hECWnV3z73xzClh4TmlHq1q66z9CjAa2AutKa';
     
     public function testCreateLiveVideo() {
         
         $var = '{
                         "args": {
-                                "accessToken": "EAAWzJ0aa2GsBAPpLoFG3YuQhfPuzsP4DHeOAt8AtPvRv47wZChqVrvvMOVxqS78DOt6Txa4zG4e9D7uqi9QE2BuEiXpC0ejCtWnOSm0OUG5Qaz9UTH664fQ2ruehNsqrHK4ZA4kTamysS3h3zJSIXTl5qZBRFM29ZA2scKxd7niCGLwzipmA",
+                                "accessToken": "EAAWzJ0aa2GsBAKOa1gdqHWIFcoLtRrhzqYlq78ZA3iIrEl0dGQBkqA7e1BgSauGG2KcJLZBJ4OxAN96Fn0PZC0kt852i29bhcfMWgsd0bhjvNfWZAyHWz8iv9goaUQLgiNyDEG9dqOTZCvGutZClnz2lZAhE8MqZCZAlnAdV113yhI03ZAOzF9Soet",
                                 "edge": "324155744616895",
                                 "title": "New video"
                         }
