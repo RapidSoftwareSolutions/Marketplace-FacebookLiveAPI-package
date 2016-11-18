@@ -1,6 +1,6 @@
 { 
     "package": "FacebookLiveAPI",
-    "tagline": "Facebook Live API Wrapper",
+    "tagline": "Facebook Live API",
     "description": "Facebook Live is a fun and powerful way to connect with your followers by creating rich stories on Facebook in real time. The Live API allows you to create stories on Facebook using live video content from a variety of sources.",
     "image": "http://logo.clearbit.com/facebook.com",
     "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-FacebookLiveAPI-package",
