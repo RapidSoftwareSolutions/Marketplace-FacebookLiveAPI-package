@@ -1,18 +1,7 @@
 # FacebookLiveAPI Package
-Facebook Live is a fun and powerful way to connect with your followers by creating rich stories on Facebook in real time. The Live API allows you to create stories on Facebook using live video content from a variety of sources.
+Stream, search and manage live video on Facebook.
 
 
-## TOC: 
-* [getLiveVideo](#getLiveVideo)
-* [createLiveVideo](#createLiveVideo)
-* [updateLiveVideo](#updateLiveVideo)
-* [deleteLiveVideo](#deleteLiveVideo)
-* [getLiveVideoLikes](#getLiveVideoLikes)
-* [getLiveVideoComments](#getLiveVideoComments)
-* [getLiveVideoErrors](#getLiveVideoErrors)
-* [getLiveVideoReactions](#getLiveVideoReactions)
- 
-<a name="getLiveVideo"/>
 ## FacebookLiveAPI.getLiveVideo
 Allows to get information about live video.
 
@@ -21,7 +10,6 @@ Allows to get information about live video.
 | accessToken| String| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: The ID of the live video.
 
-<a name="createLiveVideo"/>
 ## FacebookLiveAPI.createLiveVideo
 Allows to create live video.
 
@@ -42,7 +30,6 @@ Allows to create live video.
 | targeting         | JSON  | Optional: Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content.
 | title             | String| Optional: The title of the live video.
 
-<a name="updateLiveVideo"/>
 ## FacebookLiveAPI.updateLiveVideo
 Allows to update live video.
 
@@ -67,7 +54,6 @@ Allows to update live video.
 | targeting                     | JSON  | Optional: Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content.
 | title                         | String| Optional: The title of the live video.
 
-<a name="deleteLiveVideo"/>
 ## FacebookLiveAPI.deleteLiveVideo
 Allows to delete live video.
 
@@ -76,7 +62,6 @@ Allows to delete live video.
 | accessToken| String| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 
-<a name="getLiveVideoLikes"/>
 ## FacebookLiveAPI.getLiveVideoLikes
 Allows to retrive likes for live video.
 
@@ -85,7 +70,6 @@ Allows to retrive likes for live video.
 | accessToken| String| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 
-<a name="getLiveVideoComments"/>
 ## FacebookLiveAPI.getLiveVideoComments
 Allows to retrive comments for live video.
 
@@ -97,7 +81,6 @@ Allows to retrive comments for live video.
 | liveFilter | String| Optional: Default value: filter_low_quality. For comments on a Live streaming video, this determines whether low quality comments will be filtered out of the results (filtering is enabled by default). In all other circumstances this parameter is ignored.
 | order      | String| Optional: Preferred ordering of the comments. Accepts chronological (oldest first) and reverse chronological (newest first). If the comments can be ranked, then the order will always be ranked regardless of this modifier.
 
-<a name="getLiveVideoErrors"/>
 ## FacebookLiveAPI.getLiveVideoErrors
 Allows to retrive errors for live video.
 
@@ -106,7 +89,6 @@ Allows to retrive errors for live video.
 | accessToken| String| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 
-<a name="getLiveVideoReactions"/>
 ## FacebookLiveAPI.getLiveVideoReactions
 Allows to retrive reactions for live video.
 

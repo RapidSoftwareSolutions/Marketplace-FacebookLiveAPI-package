@@ -1,330 +1,338 @@
-{ 
+{
     "package": "FacebookLiveAPI",
     "tagline": "Facebook Live API",
-    "description": "Facebook Live is a fun and powerful way to connect with your followers by creating rich stories on Facebook in real time. The Live API allows you to create stories on Facebook using live video content from a variety of sources.",
-    "image": "http://logo.clearbit.com/facebook.com",
-    "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-FacebookLiveAPI-package",
-    "accounts": {},
+    "description": "Stream, search and manage live video on Facebook.",
+    "image": "http:\/\/logo.clearbit.com\/facebook.com",
+    "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-FacebookLiveAPI-package",
+    "keywords": ["API", "Facebook", "broadcast", "live", "marketing", "news", "social", "stream", "video"],
+    "accounts": [],
     "blocks": [{
-        "name":"getLiveVideo",
-        "description": "Allows to get information about live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "liveVideoId",
-                "type": "String",
-                "info": "Required: The ID of the live video."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }, {
-        "name":"createLiveVideo",
-        "description": "Allows to create live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "edge",
-                "type": "String",
-                "info": "Required: valid liveVideoId."
-            }, {
-                "name": "contentTags",
-                "type": "String",
-                "info": "Optional: Tags that describe the contents of the video. Use search endpoint with type=adinterest to get possible IDs."
-            }, {
-                "name": "description",
-                "type": "String",
-                "info": "Optional: The description of the live video."
-            }, {
-                "name": "isAudioOnly",
-                "type": "String",
-                "info": "Optional: Flag to indicate that the broadcast is audio-only andhas no video stream."
-            }, {
-                "name": "plannedStartTime",
-                "type": "String",
-                "info": "Optional: Unix timestamp when the broadcaster plans to go live."
-            }, {
-                "name": "privacy",
-                "type": "String",
-                "info": "Optional: Privacy for this live video."
-            }, {
-                "name": "published",
-                "type": "String",
-                "info": "Optional: Set this to false to preview the stream before going live. Deprecated. Prefer setting the status instead."
-            }, {
-                "name": "saveVod",
-                "type": "String",
-                "info": "Optional: Whether or not the video data should be saved for later consumption in VOD format. Default is true, except for certain broadcasts types (e.g. AMBIENT)"
-            }, {
-                "name": "status",
-                "type": "String",
-                "info": "Optional: Choose between UNPUBLISHED or LIVE_NOW."
-            }, {
-                "name": "stopOnDeleteStream",
-                "type": "String",
-                "info": "Optional: Default value: true. Set this to true if stream should be stopped when deleteStream RTMP command received."
-            }, {
-                "name": "streamType",
-                "type": "String",
-                "info": "Optional: The type of stream. Default value: REGULAR. Use AMBIENT for continuous broadcasts that last days or weeks (like panda cams). Ambient broadcasts do not generate VOD or notifications."
-            }, {
-                "name": "targeting",
-                "type": "JSON",
-                "info": "Optional: Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content."
-            }, {
-                "name": "title",
-                "type": "String",
-                "info": "Optional: The title of the live video."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }, {
-        "name":"updateLiveVideo",
-        "description": "Allows to update live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "liveVideoId",
-                "type": "String",
-                "info": "Required: valid liveVideoId."
-            }, {
-                "name": "contentTags",
-                "type": "String",
-                "info": "Optional: Tags that describe the contents of the video. Use search endpoint with type=adinterest to get possible IDs."
-            }, {
-                "name": "copyrightsViolationDialogState",
-                "type": "String",
-                "info": "Optional: Broadcaster-FB dialog regarding copyrights violation found, if any."
-            }, {
-                "name": "description",
-                "type": "String",
-                "info": "Optional: The description of the live video."
-            }, {
-                "name": "disturbing",
-                "type": "String",
-                "info": "Optional: If true, autoplay will be disabled and live video will have a graphic content warning overlay."
-            }, {
-                "name": "embeddable",
-                "type": "String",
-                "info": "Optional: If true, live video will be embeddable."
-            }, {
-                "name": "endLiveVideo",
-                "type": "String",
-                "info": "Optional: If true, the live video will be ended. Only valid if the live video is still running."
-            }, {
-                "name": "isAudioOnly",
-                "type": "String",
-                "info": "Optional: Flag to indicate that the broadcast is audio-only andhas no video stream."
-            }, {
-                "name": "place",
-                "type": "String",
-                "info": "Optional: Location associated with the video, if any."
-            }, {
-                "name": "privacy",
-                "type": "String",
-                "info": "Optional: Privacy for this live video."
-            }, {
-                "name": "published",
-                "type": "String",
-                "info": "Optional: Set this to false to preview the stream before going live. Deprecated. Prefer setting the status instead."
-            }, {
-                "name": "sponsorId",
-                "type": "String",
-                "info": "Optional: Facebook Page id that is tagged as sponsor in the video post."
-            }, {
-                "name": "status",
-                "type": "String",
-                "info": "Optional: Choose between UNPUBLISHED or LIVE_NOW."
-            }, {
-                "name": "streamType",
-                "type": "String",
-                "info": "Optional: The type of stream. Default value: REGULAR. Use AMBIENT for continuous broadcasts that last days or weeks (like panda cams). Ambient broadcasts do not generate VOD or notifications."
-            }, {
-                "name": "tags",
-                "type": "String",
-                "info": "Optional: Users tagged in the live video."
-            }, {
-                "name": "targeting",
-                "type": "JSON",
-                "info": "Optional: Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content."
-            }, {
-                "name": "title",
-                "type": "String",
-                "info": "Optional: The title of the live video."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }, {
-        "name":"deleteLiveVideo",
-        "description": "Allows to delete live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "liveVideoId",
-                "type": "String",
-                "info": "Required: valid liveVideoId."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }, {
-        "name":"getLiveVideoLikes",
-        "description": "Allows to retrive likes for live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "liveVideoId",
-                "type": "String",
-                "info": "Required: valid liveVideoId."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }, {
-        "name":"getLiveVideoComments",
-        "description": "Allows to retrive comments for live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "liveVideoId",
-                "type": "String",
-                "info": "Required: valid liveVideoId."
-            }, {
-                "name": "filter",
-                "type": "String",
-                "info": "Optional: Default value: toplevelfilter."
-            }, {
-                "name": "liveFilter",
-                "type": "String",
-                "info": "Optional: Default value: filter_low_quality. For comments on a Live streaming video, this determines whether low quality comments will be filtered out of the results (filtering is enabled by default). In all other circumstances this parameter is ignored."
-            }, {
-                "name": "order",
-                "type": "String",
-                "info": "Optional: Preferred ordering of the comments. Accepts chronological (oldest first) and reverse chronological (newest first). If the comments can be ranked, then the order will always be ranked regardless of this modifier."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }, {
-        "name":"getLiveVideoErrors",
-        "description": "Allows to retrive errors for live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "liveVideoId",
-                "type": "String",
-                "info": "Required: valid liveVideoId."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }, {
-        "name":"getLiveVideoReactions",
-        "description": "Allows to retrive reactions for live video.",
-        "args":[
-            {
-                "name": "accessToken",
-                "type": "String",
-                "info": "Required: Your accessToken obtained from Facebook."
-            }, {
-                "name": "liveVideoId",
-                "type": "String",
-                "info": "Required: valid liveVideoId."
-            }, {
-                "name": "type",
-                "type": "String",
-                "info": "Optional: Reaction type. Avaliable values: NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL."
-            }
-        ],
-        "callbacks":[
-            {
-                "name":"error",
-                "info": "Error"
-            },
-            {
-                "name":"success",
-                "info": "Success => channels: Array <string>"
-            }
-        ]
-    }
-    ]
+            "name": "getLiveVideo",
+            "description": "Allows to get information about live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "liveVideoId",
+                    "type": "String",
+                    "info": "The ID of the live video.",
+                    "required": true
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }, {
+            "name": "createLiveVideo",
+            "description": "Allows to create live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "edge",
+                    "type": "String",
+                    "info": "valid liveVideoId.",
+                    "required": true
+                }, {
+                    "name": "contentTags",
+                    "type": "String",
+                    "info": "Tags that describe the contents of the video. Use search endpoint with type=adinterest to get possible IDs.",
+                    "required": false
+                }, {
+                    "name": "description",
+                    "type": "String",
+                    "info": "The description of the live video.",
+                    "required": false
+                }, {
+                    "name": "isAudioOnly",
+                    "type": "String",
+                    "info": "Flag to indicate that the broadcast is audio-only andhas no video stream.",
+                    "required": false
+                }, {
+                    "name": "plannedStartTime",
+                    "type": "String",
+                    "info": "Unix timestamp when the broadcaster plans to go live.",
+                    "required": false
+                }, {
+                    "name": "privacy",
+                    "type": "String",
+                    "info": "Privacy for this live video.",
+                    "required": false
+                }, {
+                    "name": "published",
+                    "type": "String",
+                    "info": "Set this to false to preview the stream before going live. Deprecated. Prefer setting the status instead.",
+                    "required": false
+                }, {
+                    "name": "saveVod",
+                    "type": "String",
+                    "info": "Whether or not the video data should be saved for later consumption in VOD format. Default is true, except for certain broadcasts types (e.g. AMBIENT)",
+                    "required": false
+                }, {
+                    "name": "status",
+                    "type": "String",
+                    "info": "Choose between UNPUBLISHED or LIVE_NOW.",
+                    "required": false
+                }, {
+                    "name": "stopOnDeleteStream",
+                    "type": "String",
+                    "info": "Default value: true. Set this to true if stream should be stopped when deleteStream RTMP command received.",
+                    "required": false
+                }, {
+                    "name": "streamType",
+                    "type": "String",
+                    "info": "The type of stream. Default value: REGULAR. Use AMBIENT for continuous broadcasts that last days or weeks (like panda cams). Ambient broadcasts do not generate VOD or notifications.",
+                    "required": false
+                }, {
+                    "name": "targeting",
+                    "type": "JSON",
+                    "info": "Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content.",
+                    "required": false
+                }, {
+                    "name": "title",
+                    "type": "String",
+                    "info": "The title of the live video.",
+                    "required": false
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }, {
+            "name": "updateLiveVideo",
+            "description": "Allows to update live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "liveVideoId",
+                    "type": "String",
+                    "info": "valid liveVideoId.",
+                    "required": true
+                }, {
+                    "name": "contentTags",
+                    "type": "String",
+                    "info": "Tags that describe the contents of the video. Use search endpoint with type=adinterest to get possible IDs.",
+                    "required": false
+                }, {
+                    "name": "copyrightsViolationDialogState",
+                    "type": "String",
+                    "info": "Broadcaster-FB dialog regarding copyrights violation found, if any.",
+                    "required": false
+                }, {
+                    "name": "description",
+                    "type": "String",
+                    "info": "The description of the live video.",
+                    "required": false
+                }, {
+                    "name": "disturbing",
+                    "type": "String",
+                    "info": "If true, autoplay will be disabled and live video will have a graphic content warning overlay.",
+                    "required": false
+                }, {
+                    "name": "embeddable",
+                    "type": "String",
+                    "info": "If true, live video will be embeddable.",
+                    "required": false
+                }, {
+                    "name": "endLiveVideo",
+                    "type": "String",
+                    "info": "If true, the live video will be ended. Only valid if the live video is still running.",
+                    "required": false
+                }, {
+                    "name": "isAudioOnly",
+                    "type": "String",
+                    "info": "Flag to indicate that the broadcast is audio-only andhas no video stream.",
+                    "required": false
+                }, {
+                    "name": "place",
+                    "type": "String",
+                    "info": "Location associated with the video, if any.",
+                    "required": false
+                }, {
+                    "name": "privacy",
+                    "type": "String",
+                    "info": "Privacy for this live video.",
+                    "required": false
+                }, {
+                    "name": "published",
+                    "type": "String",
+                    "info": "Set this to false to preview the stream before going live. Deprecated. Prefer setting the status instead.",
+                    "required": false
+                }, {
+                    "name": "sponsorId",
+                    "type": "String",
+                    "info": "Facebook Page id that is tagged as sponsor in the video post.",
+                    "required": false
+                }, {
+                    "name": "status",
+                    "type": "String",
+                    "info": "Choose between UNPUBLISHED or LIVE_NOW.",
+                    "required": false
+                }, {
+                    "name": "streamType",
+                    "type": "String",
+                    "info": "The type of stream. Default value: REGULAR. Use AMBIENT for continuous broadcasts that last days or weeks (like panda cams). Ambient broadcasts do not generate VOD or notifications.",
+                    "required": false
+                }, {
+                    "name": "tags",
+                    "type": "String",
+                    "info": "Users tagged in the live video.",
+                    "required": false
+                }, {
+                    "name": "targeting",
+                    "type": "JSON",
+                    "info": "Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content.",
+                    "required": false
+                }, {
+                    "name": "title",
+                    "type": "String",
+                    "info": "The title of the live video.",
+                    "required": false
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }, {
+            "name": "deleteLiveVideo",
+            "description": "Allows to delete live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "liveVideoId",
+                    "type": "String",
+                    "info": "valid liveVideoId.",
+                    "required": true
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }, {
+            "name": "getLiveVideoLikes",
+            "description": "Allows to retrive likes for live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "liveVideoId",
+                    "type": "String",
+                    "info": "valid liveVideoId.",
+                    "required": true
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }, {
+            "name": "getLiveVideoComments",
+            "description": "Allows to retrive comments for live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "liveVideoId",
+                    "type": "String",
+                    "info": "valid liveVideoId.",
+                    "required": true
+                }, {
+                    "name": "filter",
+                    "type": "String",
+                    "info": "Default value: toplevelfilter.",
+                    "required": false
+                }, {
+                    "name": "liveFilter",
+                    "type": "String",
+                    "info": "Default value: filter_low_quality. For comments on a Live streaming video, this determines whether low quality comments will be filtered out of the results (filtering is enabled by default). In all other circumstances this parameter is ignored.",
+                    "required": false
+                }, {
+                    "name": "order",
+                    "type": "String",
+                    "info": "Preferred ordering of the comments. Accepts chronological (oldest first) and reverse chronological (newest first). If the comments can be ranked, then the order will always be ranked regardless of this modifier.",
+                    "required": false
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }, {
+            "name": "getLiveVideoErrors",
+            "description": "Allows to retrive errors for live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "liveVideoId",
+                    "type": "String",
+                    "info": "valid liveVideoId.",
+                    "required": true
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }, {
+            "name": "getLiveVideoReactions",
+            "description": "Allows to retrive reactions for live video.",
+            "args": [{
+                    "name": "accessToken",
+                    "type": "String",
+                    "info": "Your accessToken obtained from Facebook.",
+                    "required": true
+                }, {
+                    "name": "liveVideoId",
+                    "type": "String",
+                    "info": "valid liveVideoId.",
+                    "required": true
+                }, {
+                    "name": "type",
+                    "type": "String",
+                    "info": "Reaction type. Avaliable values: NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL.",
+                    "required": false
+                }],
+            "callbacks": [{
+                    "name": "error",
+                    "info": "Error"
+                }, {
+                    "name": "success",
+                    "info": "Success"
+                }]
+        }]
 }
