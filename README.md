@@ -3,13 +3,16 @@
 # FacebookLiveAPI Package
 Stream, search and manage live video on Facebook.
 
+## How to get credentials: 
+ 0. [Go to the Facebook online console](https://developers.facebook.com/tools/explorer/145634995501895/?method=POST&path=1417308701%2Ffeed&version=v2.7&message=Just%20testing%20FB%20API%20package)
+ 1. Press the get token button.
 
 ## FacebookLiveAPI.getLiveVideo
 Allows to get information about live video.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| Required: Your accessToken obtained from Facebook.
+| accessToken| credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: The ID of the live video.
 
 ## FacebookLiveAPI.createLiveVideo
@@ -17,7 +20,7 @@ Allows to create live video.
 
 | Field             | Type  | Description
 |-------------------|-------|----------
-| accessToken       | String| Required: Your accessToken obtained from Facebook.
+| accessToken       | credentials| Required: Your accessToken obtained from Facebook.
 | edge              | String| Required: valid liveVideoId.
 | contentTags       | String| Optional: Tags that describe the contents of the video. Use search endpoint with type=adinterest to get possible IDs.
 | description       | String| Optional: The description of the live video.
@@ -37,7 +40,7 @@ Allows to update live video.
 
 | Field                         | Type  | Description
 |-------------------------------|-------|----------
-| accessToken                   | String| Required: Your accessToken obtained from Facebook.
+| accessToken                   | credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId                   | String| Required: valid liveVideoId.
 | contentTags                   | String| Optional: Tags that describe the contents of the video. Use search endpoint with type=adinterest to get possible IDs.
 | copyrightsViolationDialogState| String| Optional: Broadcaster-FB dialog regarding copyrights violation found, if any.
@@ -61,7 +64,7 @@ Allows to delete live video.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| Required: Your accessToken obtained from Facebook.
+| accessToken| credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 
 ## FacebookLiveAPI.getLiveVideoLikes
@@ -69,7 +72,7 @@ Allows to retrive likes for live video.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| Required: Your accessToken obtained from Facebook.
+| accessToken| credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 
 ## FacebookLiveAPI.getLiveVideoComments
@@ -77,7 +80,7 @@ Allows to retrive comments for live video.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| Required: Your accessToken obtained from Facebook.
+| accessToken| credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 | filter     | String| Optional: Default value: toplevelfilter.
 | liveFilter | String| Optional: Default value: filter_low_quality. For comments on a Live streaming video, this determines whether low quality comments will be filtered out of the results (filtering is enabled by default). In all other circumstances this parameter is ignored.
@@ -88,7 +91,7 @@ Allows to retrive errors for live video.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| Required: Your accessToken obtained from Facebook.
+| accessToken| credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 
 ## FacebookLiveAPI.getLiveVideoReactions
@@ -96,7 +99,7 @@ Allows to retrive reactions for live video.
 
 | Field      | Type  | Description
 |------------|-------|----------
-| accessToken| String| Required: Your accessToken obtained from Facebook.
+| accessToken| credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
 | type       | String| Optional: Reaction type. Avaliable values: NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL.
 
