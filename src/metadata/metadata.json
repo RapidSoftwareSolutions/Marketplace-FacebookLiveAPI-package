@@ -5,13 +5,18 @@
     "image": "http:\/\/logo.clearbit.com\/facebook.com",
     "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-FacebookLiveAPI-package",
     "keywords": ["API", "Facebook", "broadcast", "live", "marketing", "news", "social", "stream", "video"],
-    "accounts": [],
+    "accounts": {
+    "domain": "facebook.com",
+    "credentials": [
+      "accessToken"
+    ]
+  },
     "blocks": [{
             "name": "getLiveVideo",
             "description": "Allows to get information about live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
@@ -32,7 +37,7 @@
             "description": "Allows to create live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
@@ -113,7 +118,7 @@
             "description": "Allows to update live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
@@ -214,7 +219,7 @@
             "description": "Allows to delete live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
@@ -235,7 +240,7 @@
             "description": "Allows to retrive likes for live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
@@ -256,7 +261,7 @@
             "description": "Allows to retrive comments for live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
@@ -292,7 +297,7 @@
             "description": "Allows to retrive errors for live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
@@ -313,7 +318,7 @@
             "description": "Allows to retrive reactions for live video.",
             "args": [{
                     "name": "accessToken",
-                    "type": "String",
+                    "type": "credentials",
                     "info": "Your accessToken obtained from Facebook.",
                     "required": true
                 }, {
