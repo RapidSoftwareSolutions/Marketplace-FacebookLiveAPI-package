@@ -82,7 +82,8 @@
                     "required": false
                 }, {
                     "name": "status",
-                    "type": "String",
+                    "type": "Select",
+                    "options": ["UNPUBLISHED","LIVE_NOW"],
                     "info": "Choose between UNPUBLISHED or LIVE_NOW.",
                     "required": false
                 }, {
@@ -183,7 +184,8 @@
                     "required": false
                 }, {
                     "name": "status",
-                    "type": "String",
+                    "type": "Select",
+                    "options": ["UNPUBLISHED","LIVE_NOW"],
                     "info": "Choose between UNPUBLISHED or LIVE_NOW.",
                     "required": false
                 }, {
@@ -328,7 +330,8 @@
                     "required": true
                 }, {
                     "name": "type",
-                    "type": "String",
+                    "type": "Select",
+                    "options": ["NONE","LIKE","LOVE","WOW","HAHA","SAD","ANGRY","THANKFUL"],
                     "info": "Reaction type. Avaliable values: NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL.",
                     "required": false
                 }],

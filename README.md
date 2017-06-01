@@ -29,7 +29,7 @@ Allows to create live video.
 | privacy           | String| Optional: Privacy for this live video.
 | published         | String| Optional: Set this to false to preview the stream before going live. Deprecated. Prefer setting the status instead.
 | saveVod           | String| Optional: Whether or not the video data should be saved for later consumption in VOD format. Default is true, except for certain broadcasts types (e.g. AMBIENT)
-| status            | String| Optional: Choose between UNPUBLISHED or LIVE_NOW.
+| status            | Select| Optional: Choose between UNPUBLISHED or LIVE_NOW.
 | stopOnDeleteStream| String| Optional: Default value: true. Set this to true if stream should be stopped when deleteStream RTMP command received.
 | streamType        | String| Optional: The type of stream. Default value: REGULAR. Use AMBIENT for continuous broadcasts that last days or weeks (like panda cams). Ambient broadcasts do not generate VOD or notifications.
 | targeting         | JSON  | Optional: Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content.
@@ -53,7 +53,7 @@ Allows to update live video.
 | privacy                       | String| Optional: Privacy for this live video.
 | published                     | String| Optional: Set this to false to preview the stream before going live. Deprecated. Prefer setting the status instead.
 | sponsorId                     | String| Optional: Facebook Page id that is tagged as sponsor in the video post.
-| status                        | String| Optional: Choose between UNPUBLISHED or LIVE_NOW.
+| status                        | Select| Optional: Choose between UNPUBLISHED or LIVE_NOW.
 | streamType                    | String| Optional: The type of stream. Default value: REGULAR. Use AMBIENT for continuous broadcasts that last days or weeks (like panda cams). Ambient broadcasts do not generate VOD or notifications.
 | tags                          | String| Optional: Users tagged in the live video.
 | targeting                     | JSON  | Optional: Object and looks like only for page_id edge that limits the audience for this content. Anyone not in these demographics will not be able to view this content.
@@ -101,5 +101,5 @@ Allows to retrive reactions for live video.
 |------------|-------|----------
 | accessToken| credentials| Required: Your accessToken obtained from Facebook.
 | liveVideoId| String| Required: valid liveVideoId.
-| type       | String| Optional: Reaction type. Avaliable values: NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL.
+| type       | Select| Optional: Reaction type. Avaliable values: NONE, LIKE, LOVE, WOW, HAHA, SAD, ANGRY, THANKFUL.
 
